@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+	
+	<listener>
+	    <listener-class>com.xeiam.sundial.ee.SundialInitializerListener</listener-class>
+	</listener>
+	
+	<context-param>
+       <param-name>start-scheduler-on-load</param-name>
+       <param-value>true</param-value>
+    </context-param>
+
+	<context-param>
+       <param-name>shutdown-on-unload</param-name>
+       <param-value>true</param-value>
+    </context-param>
+    
+	<context-param>
+       <param-name>wait-on-shutdown</param-name>
+       <param-value>true</param-value>
+    </context-param>   
+    
+	<context-param>
+       <param-name>thread-pool-size</param-name>
+       <param-value>5</param-value>
+    </context-param> 
+    
+	<context-param>
+       <param-name>global-lock-on-load</param-name>
+       <param-value>false</param-value>
+    </context-param>  
+    
+	<welcome-file-list>
+	    <welcome-file>hello.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>
